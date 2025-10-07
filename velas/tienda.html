@@ -70,6 +70,14 @@
       transform: scale(1.08);
       box-shadow: 0 8px 20px rgba(0,0,0,0.2);
     }
+
+    select, input[type="number"] {
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      padding: 5px;
+      margin-top: 5px;
+      width: 100%;
+    }
   </style>
 </head>
 <body>
@@ -102,117 +110,203 @@
 
     <div class="grid md:grid-cols-3 gap-12 max-w-6xl mx-auto">
 
-      <!-- Producto 1 -->
+      <!-- Producto Senda -->
       <div class="bg-white p-6 rounded-lg shadow-soft text-center">
         <img src="img/9.png" alt="Vela Senda" class="product-img rounded-xl w-full h-80 object-cover mb-4">
         <h3 class="text-xl font-serif">Vela "Senda"</h3>
         <p class="text-sm mb-1">Equilibrio y armonía en una forma minimalista.</p>
         <p class="text-sm text-gray-500">Medidas: 9 x 2,8 cm Aproximada.</p>
-        <p class="text-sm text-gray-500">Aroma: Coco / Romero</p>
-        <p class="text-sm text-gray-500">Color: Beige / Blanco / Rojo</p>
         <p class="text-lg font-semibold mb-3 mt-2">$15.000 COP</p>
-        <button class="btn-accent px-6 py-2 rounded-full add-cart" data-name="Senda" data-price="15000">Agregar al carrito</button>
+
+        <label>Color:</label>
+        <select class="color">
+          <option>Sin color</option>
+          <option>Beige</option>
+          <option>Blanco</option>
+          <option>Rojo</option>
+        </select>
+
+        <label>Aroma:</label>
+        <select class="aroma">
+          <option>Sin aroma</option>
+          <option>Coco</option>
+          <option>Romero</option>
+          <option>Fresa</option>
+          <option>Canela</option>
+        </select>
+
+        <label>Cantidad:</label>
+        <input type="number" class="cantidad" min="1" value="1">
+
+        <button class="btn-accent px-6 py-2 rounded-full add-cart mt-3" data-name="Senda" data-price="15000">Agregar al carrito</button>
       </div>
 
-      <!-- Producto 2 -->
+      <!-- Bruma -->
       <div class="bg-white p-6 rounded-lg shadow-soft text-center">
         <img src="img/7.png" alt="Bruma" class="product-img rounded-xl w-full h-80 object-cover mb-4">
         <h3 class="text-xl font-serif">Vela "Bruma"</h3>
         <p class="text-sm mb-1">Suavidad y paz en una sola vela, ideal para regalar.</p>
         <p class="text-sm text-gray-500">Medidas: 3,7 x 3,7 x 3,7 cm - Aproximada.</p>
-        <p class="text-sm text-gray-500">Aroma: Coco / Romero</p>
-        <p class="text-sm text-gray-500">Color: Beige / Blanco / Rojo</p>
         <p class="text-lg font-semibold mb-3 mt-2">$7.000 COP</p>
-        <button class="btn-accent px-6 py-2 rounded-full add-cart" data-name="Bruma" data-price="7000">Agregar al carrito</button>
+
+        <label>Color:</label>
+        <select class="color">
+          <option>Sin color</option>
+          <option>Beige</option>
+          <option>Blanco</option>
+          <option>Rojo</option>
+        </select>
+
+        <label>Aroma:</label>
+        <select class="aroma">
+          <option>Sin aroma</option>
+          <option>Coco</option>
+          <option>Romero</option>
+          <option>Fresa</option>
+          <option>Canela</option>
+        </select>
+
+        <label>Cantidad:</label>
+        <input type="number" class="cantidad" min="1" value="1">
+
+        <button class="btn-accent px-6 py-2 rounded-full add-cart mt-3" data-name="Bruma" data-price="7000">Agregar al carrito</button>
       </div>
 
-      <!-- Producto 3 -->
+      <!-- Alba -->
       <div class="bg-white p-6 rounded-lg shadow-soft text-center">
         <img src="img/1.png" alt="Alba" class="product-img rounded-xl w-full h-80 object-cover mb-4">
         <h3 class="text-xl font-serif">Vela "Alba"</h3>
         <p class="text-sm mb-1">Hecha para acompañar momentos de introspección y descanso.</p>
         <p class="text-sm text-gray-500">Medidas: 3,7 x 3,7 x 3,7 cm - Aproximada.</p>
-        <p class="text-sm text-gray-500">Aroma: Coco / Romero</p>
-        <p class="text-sm text-gray-500">Color: Beige / Blanco / Rojo</p>
         <p class="text-lg font-semibold mb-3 mt-2">$7.000 COP</p>
-        <button class="btn-accent px-6 py-2 rounded-full add-cart" data-name="Alba" data-price="7000">Agregar al carrito</button>
+
+        <label>Color:</label>
+        <select class="color">
+          <option>Sin color</option>
+          <option>Beige</option>
+          <option>Blanco</option>
+          <option>Rojo</option>
+        </select>
+
+        <label>Aroma:</label>
+        <select class="aroma">
+          <option>Sin aroma</option>
+          <option>Coco</option>
+          <option>Romero</option>
+          <option>Fresa</option>
+          <option>Canela</option>
+        </select>
+
+        <label>Cantidad:</label>
+        <input type="number" class="cantidad" min="1" value="1">
+
+        <button class="btn-accent px-6 py-2 rounded-full add-cart mt-3" data-name="Alba" data-price="7000">Agregar al carrito</button>
       </div>
 
-      <!-- Producto 4 -->
+      <!-- Runa -->
       <div class="bg-white p-6 rounded-lg shadow-soft text-center">
         <img src="img/3.png" alt="Runa" class="product-img rounded-xl w-full h-80 object-cover mb-4">
         <h3 class="text-xl font-serif">Vela "Runa"</h3>
         <p class="text-sm mb-1">Textura cálida y elegante, perfecta para espacios acogedores.</p>
-        <p class="text-sm text-gray-500">Medidas: 3,7 x 3,7 x 3,7 cm - Aproximada.</p>
-        <p class="text-sm text-gray-500">Aroma: Coco / Romero</p>
-        <p class="text-sm text-gray-500">Color: Beige / Blanco / Rojo</p>
         <p class="text-lg font-semibold mb-3 mt-2">$7.000 COP</p>
-        <button class="btn-accent px-6 py-2 rounded-full add-cart" data-name="Runa" data-price="7000">Agregar al carrito</button>
+
+        <label>Color:</label>
+        <select class="color">
+          <option>Sin color</option>
+          <option>Beige</option>
+          <option>Blanco</option>
+          <option>Rojo</option>
+        </select>
+
+        <label>Aroma:</label>
+        <select class="aroma">
+          <option>Sin aroma</option>
+          <option>Coco</option>
+          <option>Romero</option>
+          <option>Fresa</option>
+          <option>Canela</option>
+        </select>
+
+        <label>Cantidad:</label>
+        <input type="number" class="cantidad" min="1" value="1">
+
+        <button class="btn-accent px-6 py-2 rounded-full add-cart mt-3" data-name="Runa" data-price="7000">Agregar al carrito</button>
       </div>
 
-      <!-- Producto 5 -->
+      <!-- Corazón -->
       <div class="bg-white p-6 rounded-lg shadow-soft text-center">
         <img src="img/12.jpg" alt="Corazón" class="product-img rounded-xl w-full h-80 object-cover mb-4">
         <h3 class="text-xl font-serif">Vela “Corazón”</h3>
         <p class="text-sm mb-1">Simboliza energía y abundancia con un diseño único.</p>
-        <p class="text-sm text-gray-500">Medidas: 3,7 x 3,7 x 3,7 cm - Aproximada.</p>
-        <p class="text-sm text-gray-500">Aroma: Coco / Romero / Canela</p>
-        <p class="text-sm text-gray-500">Color: Beige / Blanco / Rojo</p>
         <p class="text-lg font-semibold mb-3 mt-2">$7.000 COP</p>
-        <button class="btn-accent px-6 py-2 rounded-full add-cart" data-name="Corazón" data-price="7000">Agregar al carrito</button>
+
+        <label>Color:</label>
+        <select class="color">
+          <option>Sin color</option>
+          <option>Beige</option>
+          <option>Blanco</option>
+          <option>Rojo</option>
+        </select>
+
+        <label>Aroma:</label>
+        <select class="aroma">
+          <option>Sin aroma</option>
+          <option>Coco</option>
+          <option>Romero</option>
+          <option>Fresa</option>
+          <option>Canela</option>
+        </select>
+
+        <label>Cantidad:</label>
+        <input type="number" class="cantidad" min="1" value="1">
+
+        <button class="btn-accent px-6 py-2 rounded-full add-cart mt-3" data-name="Corazón" data-price="7000">Agregar al carrito</button>
       </div>
 
-      <!-- Producto 6 -->
+      <!-- Nube -->
       <div class="bg-white p-6 rounded-lg shadow-soft text-center">
         <img src="img/5.png" alt="Nube" class="product-img rounded-xl w-full h-80 object-cover mb-4">
         <h3 class="text-xl font-serif">Vela "Nube"</h3>
         <p class="text-sm mb-1">Un detalle que enciende el amor y la conexión emocional.</p>
-        <p class="text-sm text-gray-500">Medidas: 3,7 x 3,7 x 3,7 cm - Aproximada.</p>
-        <p class="text-sm text-gray-500">Aroma: Coco / Fresa / Romero</p>
-        <p class="text-sm text-gray-500">Color: Beige / Blanco / Rojo</p>
         <p class="text-lg font-semibold mb-3 mt-2">$7.000 COP</p>
-        <button class="btn-accent px-6 py-2 rounded-full add-cart" data-name="Nube" data-price="7000">Agregar al carrito</button>
+
+        <label>Color:</label>
+        <select class="color">
+          <option>Sin color</option>
+          <option>Beige</option>
+          <option>Blanco</option>
+          <option>Rojo</option>
+        </select>
+
+        <label>Aroma:</label>
+        <select class="aroma">
+          <option>Sin aroma</option>
+          <option>Coco</option>
+          <option>Romero</option>
+          <option>Fresa</option>
+          <option>Canela</option>
+        </select>
+
+        <label>Cantidad:</label>
+        <input type="number" class="cantidad" min="1" value="1">
+
+        <button class="btn-accent px-6 py-2 rounded-full add-cart mt-3" data-name="Nube" data-price="7000">Agregar al carrito</button>
       </div>
     </div>
 
-    <!-- Personalización -->
     <div class="mt-12 bg-[#efeae5] py-6 rounded-2xl max-w-4xl mx-auto text-center">
       <p class="text-[#3e2c1b] font-medium text-lg">
-        ✨ Todas nuestras velas pueden personalizarse con la <strong>fragancia</strong> que prefieras (Coco o Romero)
-        y en el <strong>color</strong> de tu elección (Beige, Blanco o Rojo).
+        ✨ Todas nuestras velas pueden personalizarse con el <strong>color</strong> y <strong>aroma</strong> de tu preferencia.
       </p>
+      <p class="text-sm mt-2">🚚 El costo del domicilio es adicional y depende del lugar de entrega.</p>
     </div>
   </main>
-
-  <!-- 🧾 FORMULARIO DE PEDIDO -->
-  <div id="order-form" class="hidden fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-    <div class="bg-white p-8 rounded-2xl shadow-lg max-w-md w-full relative">
-      <h3 class="text-2xl font-serif mb-4 text-center">Finalizar compra 🕯️</h3>
-      <p class="text-center text-sm text-gray-600 mb-2">🚚 El costo del domicilio es adicional y depende del lugar de entrega.</p>
-      <button id="close-form" class="absolute top-3 right-4 text-gray-500 hover:text-gray-700 text-xl">&times;</button>
-
-      <form id="purchase-form" class="space-y-3">
-        <input type="text" id="nombre" placeholder="Nombre completo" class="w-full border p-2 rounded-md" required>
-        <input type="text" id="direccion" placeholder="Dirección de envío" class="w-full border p-2 rounded-md" required>
-        <input type="text" id="ciudad" placeholder="Ciudad o lugar de entrega" class="w-full border p-2 rounded-md" required>
-        <input type="text" id="aroma" placeholder="Aroma (Coco, Romero...)" class="w-full border p-2 rounded-md">
-        <input type="text" id="color" placeholder="Color (Beige, Rojo, Blanco...)" class="w-full border p-2 rounded-md">
-        <input type="number" id="cantidad" placeholder="Cantidad" min="1" class="w-full border p-2 rounded-md">
-        <input type="text" id="pago" placeholder="Método de pago (Nequi, Efectivo...)" class="w-full border p-2 rounded-md">
-        <textarea id="notas" placeholder="Notas adicionales" class="w-full border p-2 rounded-md"></textarea>
-        <button type="submit" class="bg-[#D6AD60] w-full text-white py-2 rounded-md hover:bg-[#c19a50]">
-          Enviar pedido por WhatsApp
-        </button>
-      </form>
-    </div>
-  </div>
 
   <!-- 📞 Pie de página -->
   <footer class="py-10 border-t border-[var(--color-dark)] text-center">
     <p>© 2025 Velas Marcela — Todos los derechos reservados</p>
   </footer>
 
-  <!-- 🧠 Script del carrito -->
   <script>
     let cart = JSON.parse(localStorage.getItem('velasMarcelaCart')) || [];
 
@@ -230,10 +324,15 @@
     });
 
     document.querySelectorAll('.add-cart').forEach(btn => {
-      btn.addEventListener('click', () => {
+      btn.addEventListener('click', (e) => {
+        const product = btn.closest('div');
         const name = btn.dataset.name;
         const price = parseFloat(btn.dataset.price);
-        cart.push({ name, price });
+        const color = product.querySelector('.color').value;
+        const aroma = product.querySelector('.aroma').value;
+        const cantidad = parseInt(product.querySelector('.cantidad').value);
+
+        cart.push({ name, price, color, aroma, cantidad });
         localStorage.setItem('velasMarcelaCart', JSON.stringify(cart));
         updateCartCount();
         renderCart();
@@ -245,9 +344,9 @@
       let total = 0;
       cart.forEach(item => {
         const li = document.createElement('li');
-        li.textContent = `${item.name} — $${item.price.toLocaleString()}`;
+        li.textContent = `${item.name} (${item.color}, ${item.aroma}) x${item.cantidad} — $${(item.price * item.cantidad).toLocaleString()}`;
         cartItems.appendChild(li);
-        total += item.price;
+        total += item.price * item.cantidad;
       });
       cartTotal.textContent = total.toLocaleString();
     }
@@ -263,48 +362,22 @@
       updateCartCount();
     });
 
-    // 🧾 Lógica del formulario
-    const orderForm = document.getElementById('order-form');
-    const closeForm = document.getElementById('close-form');
-    const purchaseForm = document.getElementById('purchase-form');
-
     whatsappOrder.addEventListener('click', () => {
       if (cart.length === 0) {
         alert("Tu carrito está vacío 🕯️");
         return;
       }
-      orderForm.classList.remove('hidden');
-    });
-
-    closeForm.addEventListener('click', () => {
-      orderForm.classList.add('hidden');
-    });
-
-    purchaseForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-
-      const nombre = document.getElementById('nombre').value;
-      const direccion = document.getElementById('direccion').value;
-      const ciudad = document.getElementById('ciudad').value;
-      const aroma = document.getElementById('aroma').value;
-      const color = document.getElementById('color').value;
-      const cantidad = document.getElementById('cantidad').value;
-      const pago = document.getElementById('pago').value;
-      const notas = document.getElementById('notas').value;
 
       let message = "🕯️ *Pedido desde Velas Marcela*%0A%0A";
       cart.forEach((item, index) => {
-        message += `${index + 1}. ${item.name} — $${item.price.toLocaleString()}%0A`;
+        message += `${index + 1}. ${item.name} (${item.color}, ${item.aroma}) x${item.cantidad} — $${(item.price * item.cantidad).toLocaleString()}%0A`;
       });
 
-      const total = cart.reduce((sum, item) => sum + item.price, 0);
-      message += `%0A💰 *Total:* $${total.toLocaleString()} COP%0A(🚚 El costo del domicilio es adicional)%0A%0A`;
-      message += `👤 *Nombre:* ${nombre}%0A📍 *Dirección:* ${direccion}%0A🏙️ *Ciudad:* ${ciudad}%0A🌸 *Aroma:* ${aroma}%0A🎨 *Color:* ${color}%0A📦 *Cantidad:* ${cantidad}%0A💳 *Pago:* ${pago}%0A📝 *Notas:* ${notas}%0A%0A`;
+      const total = cart.reduce((sum, item) => sum + item.price * item.cantidad, 0);
+      message += `%0A💰 *Total:* $${total.toLocaleString()} COP%0A🚚 *El costo del domicilio es adicional y depende del lugar de entrega.*`;
 
       const whatsappUrl = `https://wa.me/573234480931?text=${message}`;
       window.open(whatsappUrl, "_blank");
-
-      orderForm.classList.add('hidden');
     });
 
     updateCartCount();
@@ -313,3 +386,4 @@
 
 </body>
 </html>
+
