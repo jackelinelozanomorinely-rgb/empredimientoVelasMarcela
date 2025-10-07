@@ -14,10 +14,10 @@
   <!-- 🎨 Paleta de colores personalizada -->
   <style>
     :root {
-      --color-primary: #CBBFAD; /* Beige cálido */
-      --color-secondary: #F6F4F2; /* Crema */
-      --color-dark: #3C2F2F; /* Marrón oscuro */
-      --color-accent: #D6AD60; /* Dorado suave */
+      --color-primary: #CBBFAD;
+      --color-secondary: #F6F4F2;
+      --color-dark: #3C2F2F;
+      --color-accent: #D6AD60;
     }
 
     body {
@@ -49,7 +49,6 @@
       backdrop-filter: blur(4px);
     }
 
-    /* ✨ Animación sutil al pasar el cursor */
     .card-hover {
       transition: all 0.3s ease-in-out;
     }
@@ -59,39 +58,39 @@
       box-shadow: 0 6px 16px rgba(60, 47, 47, 0.15);
     }
 
-    /* 📸 Imagen de producto uniforme y armónica */
+    /* 📸 Imagen de producto más grande y completa */
     .product-img {
       width: 100%;
-      aspect-ratio: 1 / 1; /* Cuadro uniforme */
-      object-fit: cover; /* Rellena sin deformar */
-      object-position: center; /* Centra la imagen */
-      border-radius: 1rem; /* Bordes suaves */
-      background-color: #f7f5f3; /* Fondo neutro suave */
+      height: 350px; /* Tamaño mayor para que se vea completa */
+      object-fit: contain; /* Imagen completa */
+      object-position: center;
+      border-radius: 1rem;
+      background-color: #f7f5f3;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       box-shadow: 0 4px 12px rgba(60, 47, 47, 0.1);
+      padding: 10px;
     }
 
     .product-img:hover {
       transform: scale(1.03);
       box-shadow: 0 8px 18px rgba(60, 47, 47, 0.15);
     }
+
   </style>
 </head>
 <body>
 
   <!-- 🕯️ Encabezado -->
   <header class="shadow-soft relative">
-    <nav class="flex justify-between items-center py-6 px-6 relative">
-      <!-- Logo -->
-      <div class="absolute left-6 flex items-center space-x-3">
+    <nav class="flex justify-between items-center py-6 px-6 relative flex-wrap">
+      <!-- ✅ Logo + título juntos -->
+      <div class="flex items-center space-x-3">
         <img src="img/logo.png" alt="Logo Velas Marcela" class="w-16 h-auto">
+        <h1 class="text-4xl font-serif tracking-wider uppercase">Velas Marcela</h1>
       </div>
 
-      <!-- ✅ Título centrado -->
-      <h1 class="text-4xl font-serif tracking-wider text-center w-full uppercase">Velas Marcela</h1>
-
       <!-- Menú -->
-      <ul class="flex space-x-6 text-lg absolute right-6">
+      <ul class="flex space-x-6 text-lg">
         <li><a href="#productos" class="hover:text-[var(--color-accent)]">Productos</a></li>
         <li><a href="#about" class="hover:text-[var(--color-accent)]">Acerca de</a></li>
         <li><a href="#contacto" class="hover:text-[var(--color-accent)]">Contacto</a></li>
@@ -99,7 +98,7 @@
       </ul>
     </nav>
 
-    <!-- 🌿 Banner -->
+    <!-- 🌿 Banner (queda igual) -->
     <div class="relative">
       <img src="img/banner1.png" alt="Banner Velas Marcela" class="w-full h-[400px] object-cover opacity-90">
       <div class="absolute inset-0 flex flex-col justify-center items-center text-center text-[var(--color-dark)] px-6 overlay">
@@ -150,25 +149,17 @@
 
     <!-- 🌸 SOBRE NUESTRA MARCA -->
     <section id="about" class="grid md:grid-cols-2 gap-12 items-center bg-[var(--color-secondary)] p-10 rounded-xl shadow-soft">
-      <!-- Imagen lateral -->
-      <img src="img/misvelas.png" 
-           alt="Velas artesanales" 
-           class="rounded-xl shadow-md object-cover w-full h-full">
-
-      <!-- Texto -->
+      <img src="img/misvelas.png" alt="Velas artesanales" class="rounded-xl shadow-md object-contain w-full h-full bg-[#f6f4f2]">
       <div>
         <h3 class="text-5xl font-serif text-[var(--color-dark)] mb-8">Sobre nuestra marca</h3>
-
         <p class="text-lg mb-4 leading-relaxed">
           <strong>Velas Marcela</strong> es un emprendimiento colombiano dedicado a la creación de velas artesanales elaboradas con 
           <strong>cera vegetal y fragancias naturales</strong>. Cada pieza está inspirada en la calma, la armonía y la elegancia de lo simple.
         </p>
-
         <p class="text-lg mb-4 leading-relaxed">
           Nació del deseo de <strong>progresar y emprender con propósito</strong>, combinando el arte manual con la búsqueda de bienestar interior.  
           Más que una marca, es un espacio de aprendizaje, innovación y conexión emocional a través de la luz.
         </p>
-
         <p class="text-lg italic text-[var(--color-dark)] leading-relaxed">
           <strong>Jackeline Marcela Lozano Morinely</strong>, fundadora y CEO, continúa creciendo junto a cada creación,  
           demostrando que una vela no solo ilumina un espacio, sino también el camino de quien se atreve a soñar ✨.
@@ -201,3 +192,4 @@
 
 </body>
 </html>
+
