@@ -64,6 +64,9 @@
     .product-img {
       transition: transform 0.5s ease, box-shadow 0.5s ease;
       cursor: pointer;
+      object-fit: contain !important;
+      height: 320px;
+      background-color: #f8f8f8;
     }
 
     .product-img:hover {
@@ -110,9 +113,9 @@
 
     <div class="grid md:grid-cols-3 gap-12 max-w-6xl mx-auto">
 
-      <!-- Producto Senda -->
+      <!-- Producto 1 -->
       <div class="bg-white p-6 rounded-lg shadow-soft text-center">
-        <img src="img/9.png" alt="Vela Senda" class="product-img rounded-xl w-full h-80 object-cover mb-4">
+        <img src="img/9.png" alt="Vela Senda" class="product-img rounded-xl w-full mb-4">
         <h3 class="text-xl font-serif">Vela "Senda"</h3>
         <p class="text-sm mb-1">Equilibrio y armonía en una forma minimalista.</p>
         <p class="text-sm text-gray-500">Medidas: 9 x 2,8 cm Aproximada.</p>
@@ -141,9 +144,9 @@
         <button class="btn-accent px-6 py-2 rounded-full add-cart mt-3" data-name="Senda" data-price="15000">Agregar al carrito</button>
       </div>
 
-      <!-- Bruma -->
+      <!-- Producto 2 -->
       <div class="bg-white p-6 rounded-lg shadow-soft text-center">
-        <img src="img/7.png" alt="Bruma" class="product-img rounded-xl w-full h-80 object-cover mb-4">
+        <img src="img/7.png" alt="Bruma" class="product-img rounded-xl w-full mb-4">
         <h3 class="text-xl font-serif">Vela "Bruma"</h3>
         <p class="text-sm mb-1">Suavidad y paz en una sola vela, ideal para regalar.</p>
         <p class="text-sm text-gray-500">Medidas: 3,7 x 3,7 x 3,7 cm - Aproximada.</p>
@@ -172,9 +175,9 @@
         <button class="btn-accent px-6 py-2 rounded-full add-cart mt-3" data-name="Bruma" data-price="7000">Agregar al carrito</button>
       </div>
 
-      <!-- Alba -->
+      <!-- Producto 3 -->
       <div class="bg-white p-6 rounded-lg shadow-soft text-center">
-        <img src="img/1.png" alt="Alba" class="product-img rounded-xl w-full h-80 object-cover mb-4">
+        <img src="img/1.png" alt="Alba" class="product-img rounded-xl w-full mb-4">
         <h3 class="text-xl font-serif">Vela "Alba"</h3>
         <p class="text-sm mb-1">Hecha para acompañar momentos de introspección y descanso.</p>
         <p class="text-sm text-gray-500">Medidas: 3,7 x 3,7 x 3,7 cm - Aproximada.</p>
@@ -203,9 +206,9 @@
         <button class="btn-accent px-6 py-2 rounded-full add-cart mt-3" data-name="Alba" data-price="7000">Agregar al carrito</button>
       </div>
 
-      <!-- Runa -->
+      <!-- Producto 4 -->
       <div class="bg-white p-6 rounded-lg shadow-soft text-center">
-        <img src="img/3.png" alt="Runa" class="product-img rounded-xl w-full h-80 object-cover mb-4">
+        <img src="img/3.png" alt="Runa" class="product-img rounded-xl w-full mb-4">
         <h3 class="text-xl font-serif">Vela "Runa"</h3>
         <p class="text-sm mb-1">Textura cálida y elegante, perfecta para espacios acogedores.</p>
         <p class="text-lg font-semibold mb-3 mt-2">$7.000 COP</p>
@@ -233,9 +236,9 @@
         <button class="btn-accent px-6 py-2 rounded-full add-cart mt-3" data-name="Runa" data-price="7000">Agregar al carrito</button>
       </div>
 
-      <!-- Corazón -->
+      <!-- Producto 5 -->
       <div class="bg-white p-6 rounded-lg shadow-soft text-center">
-        <img src="img/12.jpg" alt="Corazón" class="product-img rounded-xl w-full h-80 object-cover mb-4">
+        <img src="img/12.jpg" alt="Corazón" class="product-img rounded-xl w-full mb-4">
         <h3 class="text-xl font-serif">Vela “Corazón”</h3>
         <p class="text-sm mb-1">Simboliza energía y abundancia con un diseño único.</p>
         <p class="text-lg font-semibold mb-3 mt-2">$7.000 COP</p>
@@ -263,9 +266,9 @@
         <button class="btn-accent px-6 py-2 rounded-full add-cart mt-3" data-name="Corazón" data-price="7000">Agregar al carrito</button>
       </div>
 
-      <!-- Nube -->
+      <!-- Producto 6 -->
       <div class="bg-white p-6 rounded-lg shadow-soft text-center">
-        <img src="img/5.png" alt="Nube" class="product-img rounded-xl w-full h-80 object-cover mb-4">
+        <img src="img/5.png" alt="Nube" class="product-img rounded-xl w-full mb-4">
         <h3 class="text-xl font-serif">Vela "Nube"</h3>
         <p class="text-sm mb-1">Un detalle que enciende el amor y la conexión emocional.</p>
         <p class="text-lg font-semibold mb-3 mt-2">$7.000 COP</p>
@@ -324,7 +327,7 @@
     });
 
     document.querySelectorAll('.add-cart').forEach(btn => {
-      btn.addEventListener('click', (e) => {
+      btn.addEventListener('click', () => {
         const product = btn.closest('div');
         const name = btn.dataset.name;
         const price = parseFloat(btn.dataset.price);
@@ -386,4 +389,5 @@
 
 </body>
 </html>
+
 
