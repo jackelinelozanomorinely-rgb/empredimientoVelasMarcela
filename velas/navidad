@@ -108,6 +108,15 @@
   <footer class="py-8 text-center">
     <img src="img/logo.png" alt="Logo Velas Marcela" class="w-16 mx-auto mb-3">
     <p class="text-sm"> 2025 Velas Marcela - Todos los derechos reservados</p>
+<p>
+        📸 Instagram:
+        <a href="https://www.instagram.com/velas_marcela/" 
+           target="_blank" 
+           class="text-[var(--color-primary)] hover:underline">
+          @velas_marcela
+        </a>
+      </p>
+
   </footer>
 </body>
 </html>
