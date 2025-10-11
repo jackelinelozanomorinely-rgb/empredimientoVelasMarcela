@@ -8,139 +8,147 @@
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- 🎨 Paleta de colores personalizada -->
   <style>
     :root {
-      --color-primary: #CBBFAD;
-      --color-secondary: #F6F4F2;
-      --color-dark: #3C2F2F;
-      --color-accent: #D6AD60;
+      --color-bg: #F5F1EB;
+      --color-primary: #D6C3B4;
+      --color-dark: #2D2424;
+      --color-accent: #B38B59;
     }
 
     body {
-      background-color: var(--color-secondary);
+      background-color: var(--color-bg);
       color: var(--color-dark);
       font-family: 'Georgia', serif;
+      scroll-behavior: smooth;
     }
 
-    header, footer {
+    header {
       background-color: var(--color-primary);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+
+    nav a {
       color: var(--color-dark);
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--color-accent);
     }
 
     .btn-accent {
       background-color: var(--color-accent);
-      color: white;
+      color: #fff;
+      transition: all 0.3s ease;
     }
 
     .btn-accent:hover {
-      background-color: #c19a50;
+      background-color: #9a7549;
+      transform: scale(1.05);
     }
 
-    .shadow-soft {
-      box-shadow: 0 4px 10px rgba(60, 47, 47, 0.1);
-    }
-
-    .overlay {
-      background: rgba(255, 255, 255, 0.5);
-      backdrop-filter: blur(4px);
-    }
-
-    .card-hover {
-      transition: all 0.3s ease-in-out;
-    }
-
-    .card-hover:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 16px rgba(60, 47, 47, 0.15);
-    }
-
-    /* 📸 Imagen de producto más grande y completa */
     .product-img {
       width: 100%;
-      height: 350px; /* Tamaño mayor para que se vea completa */
-      object-fit: contain; /* Imagen completa */
-      object-position: center;
+      height: 350px;
+      object-fit: contain;
+      background-color: #f8f6f3;
       border-radius: 1rem;
-      background-color: #f7f5f3;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      box-shadow: 0 4px 12px rgba(60, 47, 47, 0.1);
-      padding: 10px;
     }
 
     .product-img:hover {
       transform: scale(1.03);
-      box-shadow: 0 8px 18px rgba(60, 47, 47, 0.15);
+      box-shadow: 0 8px 18px rgba(45, 36, 36, 0.15);
     }
 
+    footer {
+      background-color: var(--color-dark);
+      color: #f5f1eb;
+    }
+
+    .overlay {
+      background: rgba(255, 255, 255, 0.5);
+      backdrop-filter: blur(5px);
+    }
+
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
   </style>
 </head>
 <body>
 
-  <!-- 🕯️ Encabezado -->
-  <header class="shadow-soft relative">
-    <nav class="flex justify-between items-center py-6 px-6 relative flex-wrap">
-      <!-- ✅ Logo + título juntos -->
-      <div class="flex items-center space-x-3">
-        <img src="img/logo.png" alt="Logo Velas Marcela" class="w-16 h-auto">
-        <h1 class="text-4xl font-serif tracking-wider uppercase">Velas Marcela</h1>
+  <!-- 🕯️ ENCABEZADO -->
+  <header class="relative">
+    <!-- ✅ NAV CON LOGO CENTRADO -->
+    <nav class="flex justify-between items-center px-8 py-4">
+      <div class="flex space-x-6 text-lg">
+        <a href="index.html">Inicio</a>
+        <a href="tienda.html">Tienda</a>
       </div>
 
-      <!-- Menú -->
-      <ul class="flex space-x-6 text-lg">
-        <li><a href="#productos" class="hover:text-[var(--color-accent)]">Productos</a></li>
-        <li><a href="#about" class="hover:text-[var(--color-accent)]">Acerca de</a></li>
-        <li><a href="#contacto" class="hover:text-[var(--color-accent)]">Contacto</a></li>
-        <li><a href="tienda.html" class="hover:text-[var(--color-accent)]">Tienda</a></li>
-      </ul>
+      <!-- Logo centrado -->
+      <div class="flex justify-center">
+        <img src="img/logo.png" alt="Logo Velas Marcela" class="w-24 h-auto">
+      </div>
+
+      <div class="flex space-x-6 text-lg">
+        <a href="#about">Sobre Nosotros</a>
+        <a href="#contacto">Contacto</a>
+      </div>
     </nav>
 
-    <!-- 🌿 Banner (queda igual) -->
+    <!-- 🌿 Banner -->
     <div class="relative">
-      <img src="img/banner1.png" alt="Banner Velas Marcela" class="w-full h-[400px] object-cover opacity-90">
-      <div class="absolute inset-0 flex flex-col justify-center items-center text-center text-[var(--color-dark)] px-6 overlay">
-        <h2 class="text-5xl md:text-6xl font-serif mb-6">Paz, calidez y elegancia</h2>
-        <p class="max-w-2xl text-lg md:text-xl font-light mb-8">
-          En <strong>Velas Marcela</strong> celebramos la calma, la energía positiva y la belleza en lo sencillo.  
-          Cada detalle está pensado para iluminar tu espacio interior ✨
+      <img src="img/banner1.png" alt="Banner Velas Marcela" class="w-full h-[500px] object-cover brightness-90">
+      <div class="absolute inset-0 flex flex-col justify-center items-center text-center overlay fade-in">
+        <h2 class="text-5xl md:text-6xl font-serif mb-6 text-[var(--color-dark)]">Luz, calma y armonía</h2>
+        <p class="max-w-2xl text-lg md:text-xl mb-8 text-[var(--color-dark)]">
+          Velas artesanales que transforman espacios y emociones.  
+          Diseñadas con intención, hechas con el corazón 🕯️
         </p>
         <a href="tienda.html" class="btn-accent px-8 py-3 rounded-full shadow-lg text-lg">Explorar colección</a>
       </div>
     </div>
   </header>
 
-  <!-- 🛍️ Productos destacados -->
-  <main class="py-16 px-6" id="productos">
+  <!-- 🛍️ PRODUCTOS -->
+  <main class="py-20 px-6" id="productos">
     <section class="text-center mb-20">
-      <h3 class="text-4xl font-serif text-[var(--color-dark)] mb-12">Productos destacados</h3>
+      <h3 class="text-4xl font-serif text-[var(--color-dark)] mb-12">Colección destacada</h3>
 
-      <div class="grid md:grid-cols-3 gap-12">
+      <div class="grid md:grid-cols-3 gap-12 fade-in">
         <!-- Producto 1 -->
-        <div class="bg-white p-6 rounded-xl shadow-soft card-hover">
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition">
           <img src="img/5.png" alt="Vela Senda" class="product-img mb-4">
           <h4 class="text-xl font-serif mb-2">Senda</h4>
-          <p class="text-sm mb-3">Inspirada en el bosque colombiano, con notas de tierra y lluvia.</p>
-          <p class="text-lg mb-4 font-semibold">$7.000 COP</p>
+          <p class="text-sm mb-3">Equilibrio y Armonía.</p>
+          <p class="text-lg mb-4 font-semibold">$8.000 COP</p>
           <a href="tienda.html" class="btn-accent px-6 py-2 rounded-full">Ver más</a>
         </div>
 
         <!-- Producto 2 -->
-        <div class="bg-white p-6 rounded-xl shadow-soft card-hover">
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition">
           <img src="img/7.png" alt="Vela Bruma" class="product-img mb-4">
           <h4 class="text-xl font-serif mb-2">Bruma</h4>
-          <p class="text-sm mb-3">Aroma fresco de lavanda con un toque de rocío matinal.</p>
-          <p class="text-lg mb-4 font-semibold">$7.000 COP</p>
+          <p class="text-sm mb-3">Suavidad y Tranquilidad.</p>
+          <p class="text-lg mb-4 font-semibold">$8.000 COP</p>
           <a href="tienda.html" class="btn-accent px-6 py-2 rounded-full">Ver más</a>
         </div>
 
         <!-- Producto 3 -->
-        <div class="bg-white p-6 rounded-xl shadow-soft card-hover">
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition">
           <img src="img/9.png" alt="Vela Alba" class="product-img mb-4">
           <h4 class="text-xl font-serif mb-2">Alba</h4>
-          <p class="text-sm mb-3">Fragancia floral suave que evoca la calidez del amanecer.</p>
+          <p class="text-sm mb-3">Introspeccion y Descanso.</p>
           <p class="text-lg mb-4 font-semibold">$15.000 COP</p>
           <a href="tienda.html" class="btn-accent px-6 py-2 rounded-full">Ver más</a>
         </div>
@@ -148,48 +156,49 @@
     </section>
 
     <!-- 🌸 SOBRE NUESTRA MARCA -->
-    <section id="about" class="grid md:grid-cols-2 gap-12 items-center bg-[var(--color-secondary)] p-10 rounded-xl shadow-soft">
-      <img src="img/misvelas.png" alt="Velas artesanales" class="rounded-xl shadow-md object-contain w-full h-full bg-[#f6f4f2]">
+    <section id="about" class="grid md:grid-cols-2 gap-12 items-center bg-[var(--color-primary)] p-10 rounded-xl shadow-md fade-in">
+      <img src="img/misvelas.png" alt="Velas artesanales" class="rounded-xl shadow-md object-contain w-full h-full">
       <div>
-        <h3 class="text-5xl font-serif text-[var(--color-dark)] mb-8">Sobre nuestra marca</h3>
+        <h3 class="text-5xl font-serif mb-8 text-[var(--color-dark)]">Sobre nuestra marca</h3>
         <p class="text-lg mb-4 leading-relaxed">
-          <strong>Velas Marcela</strong> es un emprendimiento colombiano dedicado a la creación de velas artesanales elaboradas con 
-          <strong>cera vegetal y fragancias naturales</strong>. Cada pieza está inspirada en la calma, la armonía y la elegancia de lo simple.
+          <strong>Velas Marcela</strong> Nace del deseo de crear luz con propósito,  
+          uniendo la elegancia del diseño artesanal con aromas que equilibran cuerpo y alma.
         </p>
         <p class="text-lg mb-4 leading-relaxed">
-          Nació del deseo de <strong>progresar y emprender con propósito</strong>, combinando el arte manual con la búsqueda de bienestar interior.  
-          Más que una marca, es un espacio de aprendizaje, innovación y conexión emocional a través de la luz.
+          Elaboradas con <strong>cera vegetal</strong> y <strong>fragancias naturales</strong>,  
+          cada vela representa calma, intención y armonía.
         </p>
-        <p class="text-lg italic text-[var(--color-dark)] leading-relaxed">
-          <strong>Jackeline Marcela Lozano Morinely</strong>, fundadora y CEO, continúa creciendo junto a cada creación,  
-          demostrando que una vela no solo ilumina un espacio, sino también el camino de quien se atreve a soñar ✨.
+        <p class="text-lg italic leading-relaxed">
+          Una vela no solo ilumina un espacio, sino también el camino de quien se atreve a soñar ✨
         </p>
       </div>
     </section>
   </main>
 
-  <!-- 📞 Pie de página -->
-  <footer id="contacto" class="py-12 border-t border-[var(--color-dark)] text-center md:text-left px-6">
+  <!-- 📞 FOOTER -->
+  <footer id="contacto" class="py-12 text-center md:text-left px-6">
     <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
       <div>
-        <h4 class="text-3xl font-serif mb-2 text-[var(--color-dark)]">Velas Marcela</h4>
-        <p class="text-sm">© 2025 Todos los derechos reservados</p>
+        <img src="img/logo.png" alt="Logo Velas Marcela" class="w-20 mb-4">
+        <p class="text-sm">© 2025 Velas Marcela - Todos los derechos reservados</p>
       </div>
 
       <div>
-        <h5 class="text-xl font-serif mb-3 text-[var(--color-dark)]">Ubicación</h5>
+        <h5 class="text-xl font-serif mb-3 text-[var(--color-accent)]">Ubicación</h5>
         <p>Medellín, Colombia</p>
       </div>
 
       <div>
-        <h5 class="text-xl font-serif mb-3 text-[var(--color-dark)]">Contacto</h5>
-        <p>📧 velasmarcela@gmail.com</p>
+        <h5 class="text-xl font-serif mb-3 text-[var(--color-accent)]">Contacto</h5>
+        <!-- <p>📧 velasmarcela@gmail.com</p> -->
         <p>📱 +57 3234480931</p>
-        <p>📸 Instagram: <a href="#" class="text-[var(--color-accent)] hover:underline">@velas_marcela</a></p>
+        <p>📸 Instagram: <a href="#" class="text-[var(--color-primary)] hover:underline">@velas_marcela</a></p>
       </div>
     </div>
   </footer>
 
 </body>
 </html>
+
+
 
